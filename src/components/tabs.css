@@ -1,0 +1,77 @@
+/**
+ * Cinnamon CSS - Components: Tabs (GtkNotebook)
+ * GTK Notebook Tab bar styling
+ */
+
+.cin-tabs {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--cin-separator);
+  gap: 2px;
+  padding: 0 8px;
+  background-color: var(--cin-bg-surface);
+  user-select: none;
+}
+
+.cin-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: var(--cin-text-sm);
+  font-weight: var(--cin-font-medium);
+  color: var(--cin-fg-dim);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-top-left-radius: var(--cin-radius-md);
+  border-top-right-radius: var(--cin-radius-md);
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: all var(--cin-transition-fast);
+  outline: none;
+  position: relative;
+}
+
+.cin-tab:hover {
+  color: var(--cin-fg-base);
+  background-color: var(--cin-panel-item-hover);
+}
+
+.cin-tab.is-active,
+.cin-tab[aria-selected="true"] {
+  color: var(--cin-fg-base);
+  background-color: var(--cin-bg-base);
+  border-color: var(--cin-separator);
+  border-bottom-color: var(--cin-bg-base);
+  font-weight: var(--cin-font-bold);
+}
+
+/* Active tab top indicator strip */
+.cin-tab.is-active::before,
+.cin-tab[aria-selected="true"]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--cin-accent);
+  border-top-left-radius: var(--cin-radius-md);
+  border-top-right-radius: var(--cin-radius-md);
+}
+
+/* Tab Panels */
+.cin-tab-content {
+  padding: 16px;
+  background-color: var(--cin-bg-base);
+}
+
+.cin-tab-pane {
+  display: none;
+}
+
+.cin-tab-pane.is-active {
+  display: block;
+}

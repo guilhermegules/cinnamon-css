@@ -1,0 +1,66 @@
+/**
+ * Cinnamon CSS - Base: Reset & Normalization
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body.cin-body,
+.cin-app {
+  margin: 0;
+  padding: 0;
+  font-family: var(--cin-font-sans);
+  font-size: var(--cin-text-base);
+  line-height: var(--cin-leading-normal);
+  color: var(--cin-fg-base);
+  background-color: var(--cin-bg-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   GTK / Cinnamon Style Scrollbars
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: var(--cin-radius-pill);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background var(--cin-transition-fast);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb,
+.cin-dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover,
+.cin-dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--cin-accent);
+  color: var(--cin-accent-fg);
+}

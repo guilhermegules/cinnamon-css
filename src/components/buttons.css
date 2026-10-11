@@ -1,0 +1,187 @@
+/**
+ * Cinnamon CSS - Components: Buttons & Linked Groups
+ * Emulating GTK 3 / 4 & Mint-Y Push Buttons
+ */
+
+.cin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--cin-radius-md);
+  border: 1px solid var(--cin-btn-border);
+  background-color: var(--cin-btn-bg);
+  color: var(--cin-fg-base);
+  font-family: inherit;
+  font-size: var(--cin-text-base);
+  font-weight: var(--cin-font-medium);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background-color var(--cin-transition-fast), 
+              border-color var(--cin-transition-fast), 
+              box-shadow var(--cin-transition-fast),
+              transform var(--cin-transition-fast);
+  outline: none;
+}
+
+.cin-btn:hover {
+  background-color: var(--cin-btn-hover-bg);
+  border-color: var(--cin-border-dark);
+}
+
+.cin-btn:active {
+  background-color: var(--cin-btn-active-bg);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+  transform: translateY(1px);
+}
+
+.cin-btn:focus-visible {
+  border-color: var(--cin-accent);
+  box-shadow: 0 0 0 2px var(--cin-accent-subtle);
+}
+
+.cin-btn:disabled,
+.cin-btn.is-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   Button Variants
+   ========================================================================== */
+
+/* Suggested Action (Mint Green Primary Button) */
+.cin-btn-suggested,
+.cin-btn-primary {
+  background-color: var(--cin-accent);
+  border-color: var(--cin-accent);
+  color: var(--cin-accent-fg);
+  font-weight: var(--cin-font-bold);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cin-btn-suggested:hover,
+.cin-btn-primary:hover {
+  background-color: var(--cin-accent-hover);
+  border-color: var(--cin-accent-hover);
+  color: var(--cin-accent-fg);
+}
+
+.cin-btn-suggested:active,
+.cin-btn-primary:active {
+  background-color: var(--cin-accent-active);
+  border-color: var(--cin-accent-active);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Destructive Action (Red Warning Button) */
+.cin-btn-destructive,
+.cin-btn-danger {
+  background-color: var(--cin-danger);
+  border-color: var(--cin-danger);
+  color: #ffffff;
+  font-weight: var(--cin-font-bold);
+}
+
+.cin-btn-destructive:hover,
+.cin-btn-danger:hover {
+  background-color: var(--cin-danger-hover);
+  border-color: var(--cin-danger-hover);
+  color: #ffffff;
+}
+
+.cin-btn-destructive:active,
+.cin-btn-danger:active {
+  background-color: #d11920;
+  border-color: #d11920;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Flat / Toolbar Button */
+.cin-btn-flat {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.cin-btn-flat:hover {
+  background-color: var(--cin-panel-item-hover);
+  border-color: transparent;
+}
+
+.cin-btn-flat:active {
+  background-color: var(--cin-panel-item-active);
+  box-shadow: none;
+}
+
+/* Sizes */
+.cin-btn-sm {
+  height: 26px;
+  padding: 0 10px;
+  font-size: var(--cin-text-sm);
+  border-radius: var(--cin-radius-sm);
+}
+
+.cin-btn-lg {
+  height: 38px;
+  padding: 0 20px;
+  font-size: var(--cin-text-md);
+  border-radius: var(--cin-radius-lg);
+}
+
+.cin-btn-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  justify-content: center;
+}
+
+.cin-btn-icon.cin-btn-sm {
+  width: 26px;
+  height: 26px;
+}
+
+/* ==========================================================================
+   Linked Button Groups (gtk-linked emulation)
+   ========================================================================== */
+.cin-btn-group,
+.cin-linked {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.cin-btn-group > .cin-btn,
+.cin-linked > .cin-btn {
+  position: relative;
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.cin-btn-group > .cin-btn:first-child,
+.cin-linked > .cin-btn:first-child {
+  margin-left: 0;
+  border-top-left-radius: var(--cin-radius-md);
+  border-bottom-left-radius: var(--cin-radius-md);
+}
+
+.cin-btn-group > .cin-btn:last-child,
+.cin-linked > .cin-btn:last-child {
+  border-top-right-radius: var(--cin-radius-md);
+  border-bottom-right-radius: var(--cin-radius-md);
+}
+
+.cin-btn-group > .cin-btn:hover,
+.cin-linked > .cin-btn:hover,
+.cin-btn-group > .cin-btn:focus-visible,
+.cin-linked > .cin-btn:focus-visible,
+.cin-btn-group > .cin-btn.is-active,
+.cin-linked > .cin-btn.is-active {
+  z-index: 1;
+}

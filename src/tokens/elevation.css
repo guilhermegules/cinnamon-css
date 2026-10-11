@@ -1,0 +1,40 @@
+/**
+ * Cinnamon CSS - Design Tokens: Elevation, Borders & Radii
+ */
+
+:root {
+  /* Corner Radii */
+  --cin-radius-xs: 2px;
+  --cin-radius-sm: 3px;
+  --cin-radius-md: 6px;       /* Mint standard radius */
+  --cin-radius-lg: 8px;       /* Window frame radius */
+  --cin-radius-xl: 12px;      /* Dialog / card radius */
+  --cin-radius-pill: 9999px;  /* Pill badge, toggle switch */
+
+  /* Box Shadows */
+  --cin-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  --cin-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --cin-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.08);
+  --cin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.16), 0 4px 6px -2px rgba(0, 0, 0, 0.10);
+
+  /* Cinnamon Window & Popover Elevations */
+  --cin-shadow-window: 0 14px 28px rgba(0, 0, 0, 0.28), 0 6px 10px rgba(0, 0, 0, 0.16);
+  --cin-shadow-window-inactive: 0 8px 18px rgba(0, 0, 0, 0.18), 0 3px 6px rgba(0, 0, 0, 0.10);
+  --cin-shadow-menu: 0 8px 24px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.12);
+  --cin-shadow-osd: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 1px rgba(255, 255, 255, 0.2);
+
+  /* Transitions */
+  --cin-transition-fast: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  --cin-transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --cin-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Layers */
+  --cin-z-desktop: 1;
+  --cin-z-window: 10;
+  --cin-z-window-active: 20;
+  --cin-z-panel: 100;
+  --cin-z-menu: 200;
+  --cin-z-modal: 500;
+  --cin-z-notification: 900;
+  --cin-z-osd: 1000;
+}

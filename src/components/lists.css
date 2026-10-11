@@ -1,0 +1,101 @@
+/**
+ * Cinnamon CSS - Components: Lists & Tables
+ * GTK TreeViews and ListBoxes
+ */
+
+/* ==========================================================================
+   GTK TreeView & Data Tables
+   ========================================================================== */
+.cin-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--cin-border);
+  border-radius: var(--cin-radius-md);
+  background-color: var(--cin-bg-base);
+}
+
+.cin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--cin-text-sm);
+  text-align: left;
+}
+
+.cin-table th {
+  background-color: var(--cin-bg-surface);
+  color: var(--cin-fg-dim);
+  font-weight: var(--cin-font-bold);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--cin-separator);
+  border-right: 1px solid var(--cin-separator);
+  user-select: none;
+}
+
+.cin-table th:last-child {
+  border-right: none;
+}
+
+.cin-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--cin-separator);
+  color: var(--cin-fg-base);
+}
+
+.cin-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Zebra Striping */
+.cin-table.table-striped tbody tr:nth-child(even) {
+  background-color: var(--cin-bg-alt);
+}
+
+/* Hover & Selected Row */
+.cin-table tbody tr:hover {
+  background-color: var(--cin-bg-surface-hover);
+}
+
+.cin-table tbody tr.is-selected {
+  background-color: var(--cin-accent);
+  color: var(--cin-accent-fg);
+}
+
+.cin-table tbody tr.is-selected td {
+  color: var(--cin-accent-fg);
+}
+
+/* ==========================================================================
+   GtkListBox (Rounded items list)
+   ========================================================================== */
+.cin-listbox {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cin-bg-base);
+  border: 1px solid var(--cin-border);
+  border-radius: var(--cin-radius-md);
+  overflow: hidden;
+}
+
+.cin-listbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--cin-separator);
+  cursor: pointer;
+  transition: background-color var(--cin-transition-fast);
+  color: var(--cin-fg-base);
+}
+
+.cin-listbox-row:last-child {
+  border-bottom: none;
+}
+
+.cin-listbox-row:hover {
+  background-color: var(--cin-bg-surface-hover);
+}
+
+.cin-listbox-row.is-selected {
+  background-color: var(--cin-accent-subtle);
+  border-left: 3px solid var(--cin-accent);
+}

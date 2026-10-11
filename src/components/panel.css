@@ -1,0 +1,206 @@
+/**
+ * Cinnamon CSS - Components: Cinnamon Panel (Taskbar)
+ * True-to-life emulation of Cinnamon Desktop Panel & Applets
+ */
+
+.cin-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: var(--cin-panel-bg);
+  color: var(--cin-panel-fg);
+  border-top: 1px solid var(--cin-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  z-index: var(--cin-z-panel);
+  user-select: none;
+  font-size: var(--cin-text-sm);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.cin-panel.panel-top {
+  top: 0;
+  bottom: auto;
+  border-top: none;
+  border-bottom: 1px solid var(--cin-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Zones */
+.cin-panel-left,
+.cin-panel-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.cin-panel-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 6px;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Menu Button (The Cinnamon Mint Leaf Button)
+   ========================================================================== */
+.cin-panel-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: var(--cin-radius-sm);
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--cin-text-sm);
+  font-weight: var(--cin-font-bold);
+  cursor: pointer;
+  transition: background-color var(--cin-transition-fast), border-color var(--cin-transition-fast);
+}
+
+.cin-panel-menu-btn:hover {
+  background-color: var(--cin-panel-item-hover);
+}
+
+.cin-panel-menu-btn.is-active,
+.cin-panel-menu-btn:active {
+  background-color: var(--cin-panel-item-active);
+}
+
+.cin-panel-menu-btn svg,
+.cin-panel-menu-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+/* ==========================================================================
+   Window List (Grouped Taskbar Items)
+   ========================================================================== */
+.cin-panel-tasks {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 100%;
+}
+
+.cin-task-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  min-width: 40px;
+  max-width: 200px;
+  padding: 0 10px;
+  border-radius: var(--cin-radius-sm);
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color var(--cin-transition-fast);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cin-task-btn:hover {
+  background-color: var(--cin-panel-item-hover);
+}
+
+/* Cinnamon Active Task Underline Bar */
+.cin-task-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 6px;
+  right: 6px;
+  height: 2.5px;
+  border-radius: 1px;
+  background-color: transparent;
+  transition: background-color var(--cin-transition-fast);
+}
+
+/* Running but inactive window */
+.cin-task-btn.is-running::after {
+  background-color: var(--cin-fg-dim);
+}
+
+/* Focused active window */
+.cin-task-btn.is-active {
+  background-color: var(--cin-panel-item-active);
+}
+
+.cin-task-btn.is-active::after {
+  background-color: var(--cin-accent);
+}
+
+.cin-task-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cin-task-label {
+  font-size: var(--cin-text-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   System Tray & Applets
+   ========================================================================== */
+.cin-panel-applet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 8px;
+  margin: 0 1px;
+  border-radius: var(--cin-radius-sm);
+  color: inherit;
+  cursor: pointer;
+  transition: background-color var(--cin-transition-fast);
+}
+
+.cin-panel-applet:hover {
+  background-color: var(--cin-panel-item-hover);
+}
+
+.cin-panel-applet.is-active {
+  background-color: var(--cin-panel-item-active);
+}
+
+.cin-panel-clock {
+  font-size: var(--cin-text-sm);
+  font-weight: var(--cin-font-medium);
+  padding: 0 10px;
+}
+
+/* Show Desktop bar at far right corner */
+.cin-panel-show-desktop {
+  width: 12px;
+  height: 32px;
+  margin-left: 4px;
+  border-left: 1px solid var(--cin-border);
+  border-radius: 0 var(--cin-radius-sm) var(--cin-radius-sm) 0;
+  cursor: pointer;
+  transition: background-color var(--cin-transition-fast);
+}
+
+.cin-panel-show-desktop:hover {
+  background-color: var(--cin-accent-subtle);
+}

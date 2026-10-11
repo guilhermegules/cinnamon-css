@@ -1,0 +1,261 @@
+/**
+ * Cinnamon CSS - Design Tokens: Colors
+ * Emulating Linux Mint Cinnamon (Mint-Y & Mint-L) Design System
+ */
+
+:root {
+  /* ========================================================================
+     1. Accent Palettes (Mint-Y Official Colors)
+     ======================================================================== */
+  /* Default Mint Green (Mint-Y Base: #35a854, Classic Mint: #87cf3e) */
+  --cin-accent-mint: #35a854;
+  --cin-accent-mint-hover: #3bb85d;
+  --cin-accent-mint-active: #2e934a;
+  --cin-accent-mint-fg: #ffffff;
+
+  /* Aqua */
+  --cin-accent-aqua: #1f9ede;
+  --cin-accent-aqua-hover: #32a9e3;
+  --cin-accent-aqua-active: #178cc7;
+  --cin-accent-aqua-fg: #ffffff;
+
+  /* Blue */
+  --cin-accent-blue: #0c75de;
+  --cin-accent-blue-hover: #2284e3;
+  --cin-accent-blue-active: #0964bf;
+  --cin-accent-blue-fg: #ffffff;
+
+  /* Teal */
+  --cin-accent-teal: #199ca8;
+  --cin-accent-teal-hover: #1da9b7;
+  --cin-accent-teal-active: #14848f;
+  --cin-accent-teal-fg: #ffffff;
+
+  /* Orange */
+  --cin-accent-orange: #ff7139;
+  --cin-accent-orange-hover: #ff7f4d;
+  --cin-accent-orange-active: #e65d26;
+  --cin-accent-orange-fg: #ffffff;
+
+  /* Red */
+  --cin-accent-red: #e82127;
+  --cin-accent-red-hover: #ec383d;
+  --cin-accent-red-active: #cb181e;
+  --cin-accent-red-fg: #ffffff;
+
+  /* Purple */
+  --cin-accent-purple: #8c5dd9;
+  --cin-accent-purple-hover: #986ee0;
+  --cin-accent-purple-active: #7847c5;
+  --cin-accent-purple-fg: #ffffff;
+
+  /* Pink */
+  --cin-accent-pink: #e54980;
+  --cin-accent-pink-hover: #e95e90;
+  --cin-accent-pink-active: #cb366d;
+  --cin-accent-pink-fg: #ffffff;
+
+  /* Sand */
+  --cin-accent-sand: #c5a07c;
+  --cin-accent-sand-hover: #cca988;
+  --cin-accent-sand-active: #b18c69;
+  --cin-accent-sand-fg: #ffffff;
+
+  /* Grey */
+  --cin-accent-grey: #70737a;
+  --cin-accent-grey-hover: #7d8088;
+  --cin-accent-grey-active: #5f6167;
+  --cin-accent-grey-fg: #ffffff;
+
+  /* Active Accent Variable (Default: Mint) */
+  --cin-accent: var(--cin-accent-mint);
+  --cin-accent-hover: var(--cin-accent-mint-hover);
+  --cin-accent-active: var(--cin-accent-mint-active);
+  --cin-accent-fg: var(--cin-accent-mint-fg);
+  --cin-accent-subtle: rgba(53, 168, 84, 0.15);
+
+  /* Status Colors */
+  --cin-success: #35a854;
+  --cin-warning: #f27835;
+  --cin-danger: #f04a50;
+  --cin-danger-hover: #fc4138;
+  --cin-info: #0c75de;
+
+  /* ========================================================================
+     2. Light Theme Variables (Default)
+     ======================================================================== */
+  --cin-bg-base: #ffffff;
+  --cin-bg-header: #ebebed;
+  --cin-bg-header-backdrop: #f1f1f3;
+  --cin-bg-surface: #f8f8f9;
+  --cin-bg-surface-hover: #eaebee;
+  --cin-bg-surface-active: #e0e1e6;
+  --cin-bg-alt: #f3f3f5;
+
+  --cin-panel-bg: #e6e6e9;
+  --cin-panel-fg: #303030;
+  --cin-panel-item-hover: rgba(0, 0, 0, 0.08);
+  --cin-panel-item-active: rgba(0, 0, 0, 0.14);
+
+  --cin-fg-base: #303030;
+  --cin-fg-dim: #606064;
+  --cin-fg-subtle: #8a8a90;
+  --cin-fg-disabled: rgba(48, 48, 48, 0.38);
+  --cin-fg-inverted: #ffffff;
+
+  --cin-border: #cfd6e6;
+  --cin-border-light: #e0e4ef;
+  --cin-border-dark: #b8c0d4;
+  --cin-header-border: #bdbdbd;
+  --cin-separator: #dfdfdf;
+
+  --cin-input-bg: #ffffff;
+  --cin-input-border: #bababa;
+  --cin-input-border-hover: #9c9c9c;
+
+  --cin-btn-bg: #f8f8fa;
+  --cin-btn-border: #cfd6e6;
+  --cin-btn-hover-bg: #ffffff;
+  --cin-btn-active-bg: #e2e3e8;
+
+  --cin-menu-bg: #ffffff;
+  --cin-menu-border: rgba(0, 0, 0, 0.15);
+  --cin-menu-item-hover: rgba(53, 168, 84, 0.12);
+
+  --cin-trough-bg: #e0e0e4;
+  --cin-trough-active: var(--cin-accent);
+
+  --cin-tooltip-bg: rgba(48, 48, 48, 0.94);
+  --cin-tooltip-fg: #ffffff;
+
+  --cin-osd-bg: rgba(40, 40, 42, 0.92);
+  --cin-osd-fg: #f2f2f2;
+}
+
+/* ========================================================================
+   3. Dark Theme Variables
+   ======================================================================== */
+[data-theme="dark"],
+.cin-dark {
+  --cin-bg-base: #333339;
+  --cin-bg-header: #222226;
+  --cin-bg-header-backdrop: #27272b;
+  --cin-bg-surface: #2b2b30;
+  --cin-bg-surface-hover: #383840;
+  --cin-bg-surface-active: #40404a;
+  --cin-bg-alt: #28282d;
+
+  --cin-panel-bg: #1c1c1f;
+  --cin-panel-fg: #e1e1e1;
+  --cin-panel-item-hover: rgba(255, 255, 255, 0.08);
+  --cin-panel-item-active: rgba(255, 255, 255, 0.15);
+
+  --cin-fg-base: #dadada;
+  --cin-fg-dim: #a4a4aa;
+  --cin-fg-subtle: #74747c;
+  --cin-fg-disabled: rgba(218, 218, 218, 0.35);
+  --cin-fg-inverted: #1e1e22;
+
+  --cin-border: #44444c;
+  --cin-border-light: #4e4e58;
+  --cin-border-dark: #2c2c32;
+  --cin-header-border: #1a1a1d;
+  --cin-separator: #2c2c32;
+
+  --cin-input-bg: #27272c;
+  --cin-input-border: #44444c;
+  --cin-input-border-hover: #585864;
+
+  --cin-btn-bg: #3a3a42;
+  --cin-btn-border: #464650;
+  --cin-btn-hover-bg: #44444e;
+  --cin-btn-active-bg: #2d2d34;
+
+  --cin-menu-bg: #28282d;
+  --cin-menu-border: rgba(0, 0, 0, 0.45);
+  --cin-menu-item-hover: rgba(53, 168, 84, 0.22);
+
+  --cin-trough-bg: #25252a;
+  --cin-trough-active: var(--cin-accent);
+
+  --cin-tooltip-bg: rgba(26, 26, 29, 0.96);
+  --cin-tooltip-fg: #ffffff;
+
+  --cin-osd-bg: rgba(26, 26, 29, 0.94);
+  --cin-osd-fg: #e8e8e8;
+}
+
+/* ========================================================================
+   4. Accent Color Modifiers (data-accent="...")
+   ======================================================================== */
+[data-accent="aqua"] {
+  --cin-accent: var(--cin-accent-aqua);
+  --cin-accent-hover: var(--cin-accent-aqua-hover);
+  --cin-accent-active: var(--cin-accent-aqua-active);
+  --cin-accent-fg: var(--cin-accent-aqua-fg);
+  --cin-accent-subtle: rgba(31, 158, 222, 0.15);
+}
+
+[data-accent="blue"] {
+  --cin-accent: var(--cin-accent-blue);
+  --cin-accent-hover: var(--cin-accent-blue-hover);
+  --cin-accent-active: var(--cin-accent-blue-active);
+  --cin-accent-fg: var(--cin-accent-blue-fg);
+  --cin-accent-subtle: rgba(12, 117, 222, 0.15);
+}
+
+[data-accent="teal"] {
+  --cin-accent: var(--cin-accent-teal);
+  --cin-accent-hover: var(--cin-accent-teal-hover);
+  --cin-accent-active: var(--cin-accent-teal-active);
+  --cin-accent-fg: var(--cin-accent-teal-fg);
+  --cin-accent-subtle: rgba(25, 156, 168, 0.15);
+}
+
+[data-accent="orange"] {
+  --cin-accent: var(--cin-accent-orange);
+  --cin-accent-hover: var(--cin-accent-orange-hover);
+  --cin-accent-active: var(--cin-accent-orange-active);
+  --cin-accent-fg: var(--cin-accent-orange-fg);
+  --cin-accent-subtle: rgba(255, 113, 57, 0.15);
+}
+
+[data-accent="red"] {
+  --cin-accent: var(--cin-accent-red);
+  --cin-accent-hover: var(--cin-accent-red-hover);
+  --cin-accent-active: var(--cin-accent-red-active);
+  --cin-accent-fg: var(--cin-accent-red-fg);
+  --cin-accent-subtle: rgba(232, 33, 39, 0.15);
+}
+
+[data-accent="purple"] {
+  --cin-accent: var(--cin-accent-purple);
+  --cin-accent-hover: var(--cin-accent-purple-hover);
+  --cin-accent-active: var(--cin-accent-purple-active);
+  --cin-accent-fg: var(--cin-accent-purple-fg);
+  --cin-accent-subtle: rgba(140, 93, 217, 0.15);
+}
+
+[data-accent="pink"] {
+  --cin-accent: var(--cin-accent-pink);
+  --cin-accent-hover: var(--cin-accent-pink-hover);
+  --cin-accent-active: var(--cin-accent-pink-active);
+  --cin-accent-fg: var(--cin-accent-pink-fg);
+  --cin-accent-subtle: rgba(229, 73, 128, 0.15);
+}
+
+[data-accent="sand"] {
+  --cin-accent: var(--cin-accent-sand);
+  --cin-accent-hover: var(--cin-accent-sand-hover);
+  --cin-accent-active: var(--cin-accent-sand-active);
+  --cin-accent-fg: var(--cin-accent-sand-fg);
+  --cin-accent-subtle: rgba(197, 160, 124, 0.15);
+}
+
+[data-accent="grey"] {
+  --cin-accent: var(--cin-accent-grey);
+  --cin-accent-hover: var(--cin-accent-grey-hover);
+  --cin-accent-active: var(--cin-accent-grey-active);
+  --cin-accent-fg: var(--cin-accent-grey-fg);
+  --cin-accent-subtle: rgba(112, 115, 122, 0.15);
+}

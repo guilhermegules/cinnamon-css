@@ -1,0 +1,219 @@
+/**
+ * Cinnamon CSS - Components: Dialogs, Notifications & OSD
+ * Modal alerts, Cinnamon Desktop Notifications & On-Screen Displays
+ */
+
+/* ==========================================================================
+   Modal Dialogs & Message Boxes
+   ========================================================================== */
+.cin-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--cin-z-modal);
+  animation: cinFadeIn var(--cin-transition-fast) ease-out;
+}
+
+@keyframes cinFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cin-dialog {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--cin-bg-base);
+  border: 1px solid var(--cin-header-border);
+  border-radius: var(--cin-radius-lg);
+  box-shadow: var(--cin-shadow-window);
+  overflow: hidden;
+  animation: cinScaleUp var(--cin-transition-fast) ease-out;
+}
+
+@keyframes cinScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cin-dialog-body {
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cin-dialog-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cin-dialog-icon.icon-warning { color: var(--cin-warning); }
+.cin-dialog-icon.icon-danger { color: var(--cin-danger); }
+.cin-dialog-icon.icon-info { color: var(--cin-info); }
+.cin-dialog-icon.icon-success { color: var(--cin-success); }
+
+.cin-dialog-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cin-dialog-title {
+  font-size: var(--cin-text-lg);
+  font-weight: var(--cin-font-bold);
+  color: var(--cin-fg-base);
+}
+
+.cin-dialog-message {
+  font-size: var(--cin-text-base);
+  color: var(--cin-fg-dim);
+  line-height: var(--cin-leading-normal);
+}
+
+.cin-dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: var(--cin-bg-surface);
+  border-top: 1px solid var(--cin-separator);
+}
+
+/* ==========================================================================
+   Cinnamon Desktop Notifications
+   ========================================================================== */
+.cin-notification {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 320px;
+  background-color: var(--cin-tooltip-bg);
+  color: var(--cin-tooltip-fg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--cin-radius-md);
+  box-shadow: var(--cin-shadow-window);
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  z-index: var(--cin-z-notification);
+  backdrop-filter: blur(8px);
+  animation: cinNotificationSlideIn var(--cin-transition-normal) ease-out;
+}
+
+@keyframes cinNotificationSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cin-notification-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cin-notification-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cin-notification-title {
+  font-size: var(--cin-text-sm);
+  font-weight: var(--cin-font-bold);
+  color: #ffffff;
+}
+
+.cin-notification-text {
+  font-size: var(--cin-text-xs);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.35;
+}
+
+.cin-notification-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cin-notification-close:hover {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   On-Screen Display (OSD HUD)
+   ========================================================================== */
+.cin-osd {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 180px;
+  padding: 20px 24px;
+  background-color: var(--cin-osd-bg);
+  color: var(--cin-osd-fg);
+  border-radius: var(--cin-radius-xl);
+  box-shadow: var(--cin-shadow-osd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: var(--cin-z-osd);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  user-select: none;
+}
+
+.cin-osd-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--cin-osd-fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cin-osd-level {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--cin-radius-pill);
+  overflow: hidden;
+}
+
+.cin-osd-level-bar {
+  height: 100%;
+  background-color: var(--cin-accent);
+  border-radius: var(--cin-radius-pill);
+}

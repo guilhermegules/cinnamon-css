@@ -1,0 +1,25 @@
+/**
+ * Cinnamon CSS - Main Entry Point
+ * Linux Mint Cinnamon & Mint-Y Design System for the Web
+ */
+
+/* 1. Design Tokens */
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/elevation.css";
+
+/* 2. Base Styles */
+@import "./base/reset.css";
+@import "./base/layout.css";
+
+/* 3. Components */
+@import "./components/window.css";
+@import "./components/panel.css";
+@import "./components/menu.css";
+@import "./components/buttons.css";
+@import "./components/switch.css";
+@import "./components/forms.css";
+@import "./components/tabs.css";
+@import "./components/sidebar.css";
+@import "./components/dialogs.css";
+@import "./components/lists.css";

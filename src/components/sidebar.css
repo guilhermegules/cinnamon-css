@@ -1,0 +1,186 @@
+/**
+ * Cinnamon CSS - Components: Sidebar & Preference Rows
+ * Nemo File Manager Navigation & Linux Mint System Settings Rows
+ */
+
+/* ==========================================================================
+   Nemo-Style Navigation Sidebar
+   ========================================================================== */
+.cin-sidebar {
+  width: 210px;
+  min-width: 180px;
+  background-color: var(--cin-bg-surface);
+  border-right: 1px solid var(--cin-separator);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 6px;
+  gap: 2px;
+  overflow-y: auto;
+  user-select: none;
+}
+
+.cin-sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.cin-sidebar-title {
+  padding: 6px 10px;
+  font-size: var(--cin-text-xs);
+  font-weight: var(--cin-font-bold);
+  color: var(--cin-fg-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cin-sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: var(--cin-radius-sm);
+  color: var(--cin-fg-base);
+  text-decoration: none;
+  font-size: var(--cin-text-sm);
+  font-weight: var(--cin-font-medium);
+  cursor: pointer;
+  transition: background-color var(--cin-transition-fast), color var(--cin-transition-fast);
+}
+
+.cin-sidebar-item:hover {
+  background-color: var(--cin-panel-item-hover);
+}
+
+.cin-sidebar-item.is-active {
+  background-color: var(--cin-accent);
+  color: var(--cin-accent-fg);
+}
+
+.cin-sidebar-item.is-active .cin-sidebar-icon,
+.cin-sidebar-item.is-active .cin-badge {
+  color: var(--cin-accent-fg);
+}
+
+.cin-sidebar-item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cin-sidebar-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--cin-fg-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Badges & Pills
+   ========================================================================== */
+.cin-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px;
+  border-radius: var(--cin-radius-pill);
+  font-size: var(--cin-text-xs);
+  font-weight: var(--cin-font-bold);
+  background-color: var(--cin-panel-item-active);
+  color: var(--cin-fg-base);
+  line-height: 1;
+}
+
+.cin-badge.badge-accent {
+  background-color: var(--cin-accent);
+  color: var(--cin-accent-fg);
+}
+
+/* ==========================================================================
+   Linux Mint System Settings / Preferences Rows
+   ========================================================================== */
+.cin-pref-group {
+  margin-bottom: 24px;
+}
+
+.cin-pref-group-title {
+  font-size: var(--cin-text-sm);
+  font-weight: var(--cin-font-bold);
+  color: var(--cin-fg-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+
+.cin-pref-card {
+  background-color: var(--cin-bg-base);
+  border: 1px solid var(--cin-border);
+  border-radius: var(--cin-radius-md);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.cin-pref-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  gap: 16px;
+  border-bottom: 1px solid var(--cin-separator);
+  transition: background-color var(--cin-transition-fast);
+}
+
+.cin-pref-row:last-child {
+  border-bottom: none;
+}
+
+.cin-pref-row.is-clickable {
+  cursor: pointer;
+}
+
+.cin-pref-row.is-clickable:hover {
+  background-color: var(--cin-bg-surface-hover);
+}
+
+.cin-pref-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--cin-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cin-pref-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cin-pref-title {
+  font-size: var(--cin-text-base);
+  font-weight: var(--cin-font-medium);
+  color: var(--cin-fg-base);
+}
+
+.cin-pref-desc {
+  font-size: var(--cin-text-sm);
+  color: var(--cin-fg-dim);
+}
+
+.cin-pref-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
