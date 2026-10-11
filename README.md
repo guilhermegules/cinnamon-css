@@ -14,7 +14,7 @@ Whether you're building a web application that wants the clean, refined aestheti
 - **Authentic Mint-Y Aesthetics**: Exact color palettes, corner radii (6px), headerbars, shadows, and the iconic Mint toggle switch.
 - **10 Mint Accent Themes**: Mint Green (default), Blue, Aqua, Teal, Orange, Red, Purple, Pink, Sand, and Grey.
 - **Light & Dark Themes**: Native `[data-theme="dark"]` support.
-- **Zero Dependencies**: Pure CSS core with embedded SVG icons. Optional < 5KB JavaScript companion for window dragging and taskbar syncing.
+- **100% Pure CSS**: Zero runtime JavaScript dependencies. Embedded vector icons and clean CSS custom properties. Use with any framework (React, Vue, Svelte, vanilla HTML).
 
 ---
 

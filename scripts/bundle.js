@@ -59,11 +59,3 @@ const minified = bundleContent
 const outMinCss = path.resolve(distDir, 'cinnamon.min.css');
 fs.writeFileSync(outMinCss, minified, 'utf8');
 console.log(`Generated: ${outMinCss} (${(minified.length / 1024).toFixed(2)} KB)`);
-
-// Copy JS companion
-const srcJs = path.resolve(rootDir, 'src/js/cinnamon.js');
-const outJs = path.resolve(distDir, 'cinnamon.js');
-if (fs.existsSync(srcJs)) {
-  fs.copyFileSync(srcJs, outJs);
-  console.log(`Copied: ${outJs}`);
-}
