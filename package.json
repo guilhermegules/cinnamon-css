@@ -7,11 +7,8 @@
   "module": "src/index.css",
   "type": "module",
   "scripts": {
-    "dev": "vite demo --port 5173",
-    "build:css": "node scripts/bundle.js",
-    "build:demo": "vite build demo --outDir dist/demo",
-    "build": "npm run build:css && npm run build:demo",
-    "preview": "vite preview demo --port 5173"
+    "dev": "vite",
+    "build": "node scripts/bundle.js"
   },
   "keywords": [
     "css",

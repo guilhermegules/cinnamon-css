@@ -1,3 +1,4 @@
+import '../src/index.css';
 import { Cinnamon } from '../src/js/cinnamon.js';
 
 // Setup view switching (Desktop vs Gallery)

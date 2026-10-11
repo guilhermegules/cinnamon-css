@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cinnamon CSS - Linux Mint Design System for the Web</title>
-  <link rel="stylesheet" href="../src/index.css">
   <style>
     /* Demo Custom Styling */
     .cin-demo-controls-bar {
@@ -91,10 +90,6 @@
   </style>
 </head>
 <body class="cin-body">
-
-  <!-- ========================================================================
-       Top Bar: Demo Mode & Theme Controls
-       ======================================================================== -->
   <header class="cin-demo-controls-bar">
     <div class="demo-view-tabs cin-linked">
       <button class="cin-btn cin-btn-sm is-active" id="btnViewDesktop">🖥️ Desktop</button>
@@ -103,7 +98,6 @@
 
     <div style="height: 16px; width: 1px; background: var(--cin-separator);"></div>
 
-    <!-- Accent Swatches -->
     <div style="display: flex; gap: 6px; align-items: center;">
       <div class="cin-accent-swatch is-active" data-accent="mint" style="background: #35a854;" title="Mint Green"></div>
       <div class="cin-accent-swatch" data-accent="blue" style="background: #0c75de;" title="Blue"></div>
@@ -119,19 +113,14 @@
 
     <div style="height: 16px; width: 1px; background: var(--cin-separator);"></div>
 
-    <!-- Dark/Light Mode Switch -->
     <button class="cin-btn cin-btn-sm cin-btn-flat" id="btnThemeToggle" title="Toggle Dark/Light">
       🌙 Theme
     </button>
   </header>
 
-  <!-- ========================================================================
-       VIEW 1: Desktop Shell Emulation (Cinnamon DE)
-       ======================================================================== -->
   <main class="cin-desktop" id="desktopView">
     <div class="cin-workspace">
 
-      <!-- Desktop Icons -->
       <div class="cin-desktop-grid">
         <div class="cin-desktop-icon" ondblclick="Cinnamon.restoreWindow(document.getElementById('winNemo'))">
           <div class="cin-desktop-icon-img">
@@ -165,7 +154,6 @@
         </div>
       </div>
 
-      <!-- Window 1: Nemo File Manager -->
       <div class="cin-window is-active" id="winNemo" style="top: 70px; left: 160px; width: 680px; height: 440px;">
         <header class="cin-titlebar">
           <div class="cin-titlebar-left">
@@ -194,9 +182,7 @@
           </div>
         </header>
 
-        <!-- Window Body with Sidebar & Content -->
         <div class="cin-window-body" style="flex-direction: row;">
-          <!-- Nemo Sidebar -->
           <nav class="cin-sidebar">
             <div class="cin-sidebar-section">
               <span class="cin-sidebar-title">Places</span>
@@ -223,7 +209,6 @@
             </div>
           </nav>
 
-          <!-- File Grid -->
           <main class="cin-window-content">
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 14px;">
               <div class="cin-desktop-icon" style="color: var(--cin-fg-base);">
@@ -246,14 +231,12 @@
           </main>
         </div>
 
-        <!-- Statusbar -->
         <footer class="cin-window-statusbar">
           <span>4 items, 14.2 MB total</span>
           <span>Free space: 142.5 GB</span>
         </footer>
       </div>
 
-      <!-- Window 2: Mint System Settings -->
       <div class="cin-window" id="winSettings" style="top: 140px; left: 380px; width: 620px; height: 460px;">
         <header class="cin-titlebar">
           <div class="cin-titlebar-left">
@@ -284,7 +267,6 @@
           </div>
 
           <div class="cin-tab-content" style="flex: 1; overflow-y: auto;">
-            <!-- Tab Pane: Appearance -->
             <div class="cin-tab-pane is-active" id="tabAppearance">
               <div class="cin-pref-group">
                 <div class="cin-pref-group-title">Theme & Styling</div>
@@ -350,7 +332,6 @@
               </div>
             </div>
 
-            <!-- Tab Pane: Preferences -->
             <div class="cin-tab-pane" id="tabPreferences">
               <div class="cin-pref-card">
                 <div class="cin-pref-row">
@@ -380,7 +361,6 @@
               </div>
             </div>
 
-            <!-- Tab Pane: About -->
             <div class="cin-tab-pane" id="tabAbout">
               <div style="text-align: center; padding: 20px;">
                 <h3 style="margin: 0 0 6px 0;">Cinnamon CSS Library</h3>
@@ -392,7 +372,6 @@
         </div>
       </div>
 
-      <!-- Window 3: Terminal -->
       <div class="cin-window" id="winTerminal" style="top: 240px; left: 100px; width: 480px; height: 260px; display: none;">
         <header class="cin-titlebar">
           <div class="cin-titlebar-left">
@@ -504,18 +483,14 @@
         </div>
       </div>
 
-      <!-- Search Box at bottom -->
       <footer class="cin-menu-search">
         <input type="text" class="cin-menu-search-input" placeholder="Type to search...">
       </footer>
     </div>
 
-    <!-- ========================================================================
-         Bottom Cinnamon Panel (Taskbar)
-         ======================================================================== -->
+
     <div class="cin-panel">
       <div class="cin-panel-left">
-        <!-- Mint Leaf Start Button -->
         <button class="cin-panel-menu-btn">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
             <circle cx="12" cy="12" r="10" fill="#35a854"/>
@@ -526,7 +501,6 @@
         </button>
 
         <div class="cin-panel-tasks">
-          <!-- Dynamically populated by cinnamon.js -->
         </div>
       </div>
 
@@ -542,9 +516,6 @@
     </div>
   </main>
 
-  <!-- ========================================================================
-       VIEW 2: GTK Component Gallery (For Standard Web Apps)
-       ======================================================================== -->
   <section id="galleryView">
     <div class="cin-container">
       <div style="margin-bottom: 28px;">
@@ -558,7 +529,6 @@
 
       <div class="gallery-grid">
 
-        <!-- Card: Buttons -->
         <div class="gallery-card">
           <h3 class="gallery-card-title">Push Buttons</h3>
           <div class="cin-flex-row" style="flex-wrap: wrap;">
@@ -584,7 +554,6 @@
           </div>
         </div>
 
-        <!-- Card: Mint Switches & Toggles -->
         <div class="gallery-card">
           <h3 class="gallery-card-title">Mint Switches & Toggles</h3>
           <div class="cin-flex-col" style="gap: 14px;">
@@ -619,7 +588,7 @@
           <h3 class="gallery-card-title">Form Controls</h3>
           <div class="cin-flex-col">
             <input type="text" class="cin-input" placeholder="Text input...">
-            
+
             <div class="cin-search-box">
               <span class="cin-search-icon">🔍</span>
               <input type="text" class="cin-input" placeholder="Search applications...">
@@ -655,7 +624,6 @@
           </div>
         </div>
 
-        <!-- Card: Sliders & Progress -->
         <div class="gallery-card">
           <h3 class="gallery-card-title">Sliders & Progress</h3>
           <div class="cin-flex-col" style="gap: 16px;">
@@ -686,7 +654,6 @@
           </div>
         </div>
 
-        <!-- Card: TreeView & Tables -->
         <div class="gallery-card" style="grid-column: 1 / -1;">
           <h3 class="gallery-card-title">GTK TreeView / Table</h3>
           <div class="cin-table-container">
@@ -738,7 +705,6 @@
     </div>
   </section>
 
-  <!-- Script setup -->
   <script type="module" src="./demo.js"></script>
 </body>
 </html>
