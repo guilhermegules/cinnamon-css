@@ -4,6 +4,8 @@ A modern, zero-dependency CSS library that faithfully emulates the **Linux Mint 
 
 Whether you're building a web application that wants the clean, refined aesthetic of native Linux Mint GTK apps or an in-browser operating system simulation, **Cinnamon CSS** provides the design tokens, components, and optional micro-scripts to do it.
 
+![](./docs/demo.png)
+
 ---
 
 ## ✨ Features
@@ -24,11 +26,6 @@ Whether you're building a web application that wants the clean, refined aestheti
 
 ```bash
 npm install cinnamon-css
-```
-
-Or via CDN:
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cinnamon-css/dist/cinnamon.min.css">
 ```
 
 ### 2. Basic Setup
@@ -215,4 +212,4 @@ npm run build
 
 ## 📄 License
 
-MIT © Linux Mint Community / Cinnamon CSS Contributors
+MIT

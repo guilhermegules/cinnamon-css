@@ -1,6 +1,6 @@
 {
   "name": "cinnamon-css",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A CSS library emulating the Linux Mint Cinnamon desktop environment and Mint-Y design system for web applications.",
   "main": "dist/cinnamon.css",
   "style": "dist/cinnamon.css",
@@ -15,12 +15,11 @@
     "linux-mint",
     "cinnamon",
     "mint-y",
-    "gtk",
     "design-system",
     "theme",
     "desktop-ui"
   ],
-  "author": "Antigravity",
+  "author": "Guilherme Gules Moreira",
   "license": "MIT",
   "devDependencies": {
     "vite": "^8.3.4"
