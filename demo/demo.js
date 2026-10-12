@@ -1,3 +1,5 @@
+import '../src/index.css';
+
 /**
  * Cinnamon CSS - Demo Controller
  * Focuses purely on component interactivity, accent tinting, and theme toggling

@@ -205,6 +205,12 @@ To build the library:
 npm run build
 ```
 
+To build and preview the demo:
+```bash
+npm run build:demo
+npm run preview
+```
+
 ---
 
 ## 📄 License
