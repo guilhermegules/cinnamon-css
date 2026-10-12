@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Build CSS library
-        run: npm run build
+        run: npm run build && npm run build:demo
 
       - name: Publish to NPM
         run: npm publish --provenance --access public
