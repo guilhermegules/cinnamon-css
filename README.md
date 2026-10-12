@@ -211,6 +211,22 @@ npm run build:demo
 npm run preview
 ```
 
+### Version Bumping & Publishing
+
+Bump versions using semantic versioning:
+```bash
+npm run bump:patch    # 0.0.1 -> 0.0.2 (bug fixes)
+npm run bump:minor    # 0.0.1 -> 0.1.0 (features)
+npm run bump:feature  # alias for minor
+npm run bump:major    # 0.0.1 -> 1.0.0 (breaking changes)
+```
+
+Publish to npm:
+```bash
+npm run publish:npm
+```
+*Note: Pushing a git tag (e.g. `v0.1.0`) also triggers the automated GitHub Actions workflow to build and publish the package to npm.*
+
 ---
 
 ## 📄 License
