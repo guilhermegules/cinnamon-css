@@ -1,8 +1,8 @@
 # 🌿 Cinnamon CSS
 
-A modern, zero-dependency CSS library that faithfully emulates the **Linux Mint Cinnamon** desktop environment and the **Mint-Y / Mint-L** design system for web applications.
+A modern, zero-dependency, 100% pure CSS library that brings the clean, refined aesthetic of the **Linux Mint Cinnamon** desktop and the **Mint-Y / Mint-L** design system to the web.
 
-Whether you're building a web application that wants the clean, refined aesthetic of native Linux Mint GTK apps or an in-browser operating system simulation, **Cinnamon CSS** provides the design tokens, components, and optional micro-scripts to do it.
+Whether you're crafting web applications, dashboards, or desktop-style interfaces, **Cinnamon CSS** provides authentic design tokens, GTK-inspired components, and native Mint theming with zero runtime JavaScript.
 
 ![](./docs/demo.png)
 
@@ -10,9 +10,6 @@ Whether you're building a web application that wants the clean, refined aestheti
 
 ## ✨ Features
 
-- **Dual Mode**:
-  - **GTK App Mode**: For standard web applications, dashboards, forms, and settings dialogs.
-  - **Desktop Shell Mode**: For browser OS simulations with panels, start menus, draggable windows, desktop icons, and applets.
 - **Authentic Mint-Y Aesthetics**: Exact color palettes, corner radii (6px), headerbars, shadows, and the iconic Mint toggle switch.
 - **10 Mint Accent Themes**: Mint Green (default), Blue, Aqua, Teal, Orange, Red, Purple, Pink, Sand, and Grey.
 - **Light & Dark Themes**: Native `[data-theme="dark"]` support.
