@@ -31,7 +31,7 @@ export default defineConfig(({ command, mode, isPreview }) => {
       root: 'demo',
       css: cssConfig,
       build: {
-        outDir: '../dist-demo',
+        outDir: '../demo-dist',
         emptyOutDir: true,
         cssMinify: 'lightningcss',
         minify: 'lightningcss'

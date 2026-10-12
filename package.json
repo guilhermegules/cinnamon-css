@@ -6,11 +6,30 @@
   "style": "dist/cinnamon.css",
   "module": "src/index.css",
   "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermegules/cinnamon-css.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:demo": "vite build --mode demo",
-    "preview": "vite preview --mode demo"
+    "preview": "vite preview --mode demo",
+    "prepublishOnly": "npm run build",
+    "publish:npm": "npm publish",
+    "publish": "npm run build && npm run publish:npm",
+    "bump": "node scripts/bump.js",
+    "bump:patch": "node scripts/bump.js patch",
+    "bump:minor": "node scripts/bump.js minor",
+    "bump:feature": "node scripts/bump.js feature",
+    "bump:major": "node scripts/bump.js major"
   },
   "keywords": [
     "css",
